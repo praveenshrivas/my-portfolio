@@ -13,6 +13,9 @@ RUN npm install
 # Copy rest of the source code 
 COPY . . 
 
+# ✅ Add this missing line to build the app
+RUN npm run build
+
 #  Stage 02: Serve with nginx 
 FROM nginx:stable-alpine 
 
